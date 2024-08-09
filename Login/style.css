@@ -6,3 +6,56 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(135deg, #1a1e25, #22143c);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+
+.container p {
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+#user-name {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    color: white;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.title {
+    padding-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 60px;
+    color: white;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+.input-section a ion-icon {
+    color:#e99b2d;
+    padding: 0 0 0 15px;
+}
+
+.input-section p {
+    padding-bottom: 20px;
+}

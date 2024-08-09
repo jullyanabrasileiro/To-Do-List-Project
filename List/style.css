@@ -6,10 +6,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(135deg, #1a1e25, #22143c);
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1a1e25, #22143c);
+
     padding: 10px;
 }
 
