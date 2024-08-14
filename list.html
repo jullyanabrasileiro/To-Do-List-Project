@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/list.css">
 </head>
 <body>
-    <div class="main">
+    <main>
         <div class="user">
-            <h2 class="user-name">Hello,</h2>
+            <h2>Hello, <span id="greeting"></span></h2>
             <p>Here is your list of activities.</p>
         </div>
         
@@ -20,13 +20,13 @@
                 </h2>
                 <div class="row">
                     <input type="text" name="" id="input-box" placeholder="Add your task">
-                    <button onclick="addTask()">Add</button>
+                    <button id="add-task-button">Add</button>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     
 </body>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-<script src="js/main.js"></script>
+<script src="js/list.js" defer></script>
 </html>
