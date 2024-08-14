@@ -2,6 +2,23 @@ const inputBox = document.querySelector('#input-box');
 const listContainer = document.querySelector('.list-container');
 const userName = localStorage.getItem('')
 
+/* SAVING NAME */
+
+document.getElementById('submit-name').addEventListener('click', function(event) {
+    const user = document.querySelector(`#user-name`).value;
+
+    if (user.trim() === '') {
+        event.preventDefault();
+        alert('Hey, You need to write you name!');
+    } else {
+        localStorage.setItem('user', user);
+        window.location.href = "list.html"
+    }
+});
+
+
+/* TO DO LIST */
+
 function addTask() {
     if(inputBox.value === '') {
         alert("You must write something!")
@@ -39,7 +56,3 @@ function showTask() {
 };
 
 showTask();
-
-
-
-
