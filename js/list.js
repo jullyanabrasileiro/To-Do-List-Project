@@ -20,30 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = document.createElement('li');
             li.textContent = taskText;
 
-            const circleIcon = document.createElement('ion-icon');
-            circleIcon.setAttribute('name', 'ellipse-outline');
-            circleIcon.style.position = 'absolute';
-            circleIcon.style.left = '10px';
-            circleIcon.style = '12px';
-
-            circleIcon.addEventListener('click', function() {
-                toggleTask(li);
-            });
-
             const removeSpan = document.createElement('span');
             removeSpan.textContent = '\u00d7';
-            removeSpan.addEventListener('click', function() {
-                li.remove();
-                saveTasks();
-            });
-
-            li.appendChild(circleIcon);
             li.appendChild(removeSpan);
+
             taskList.appendChild(li);
             inputBox.value = '';
             saveTasks();
-        }
+            }
     }
+
+    taskList.addEventListener("click", function(e) {
+        if (e.target.tagName === "LI") {
+            e.target.classList.toggle("checked");
+        } else if (e.target.tagName === "SPAN") {
+            e.target.parentElement.remove();
+            saveTasks();
+        }
+    })
 
     function saveTasks() {
         localStorage.setItem('tasks', taskList.innerHTML);
